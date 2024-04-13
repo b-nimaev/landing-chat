@@ -32,10 +32,9 @@
             <!-- <button class="btn btn-dark btn-sm my-2">Добавить переводы</button> -->
           </div>
           <div class="custom-card">
-            <h6 class="card-heading mb-2">Рассчитайте калории</h6>
+            <h6 class="card-heading mb-2">Получайте четкие инструкции</h6>
             <p class="small mb-2">
-              <b>Контролируйте</b> своё суточное потребление, вводя данные о
-              приёме пищи в чат
+              Наш чат-бот предоставляет четкие и структурированные инструкции для каждого запроса
             </p>
             <nuxt-img src="/2.png" width="300" />
             <!-- <button class="btn btn-dark btn-sm my-2">Добавить материалы</button> -->
