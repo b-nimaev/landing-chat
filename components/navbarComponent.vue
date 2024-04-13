@@ -56,7 +56,7 @@
 
         </div>
         <div v-else class="my-auto auth">
-          <button class="btn btn-primary"><i class="bi bi-download"></i> &nbsp; Тестовая версия</button>
+          <button class="btn btn-primary" @click="downloadExe"><i class="bi bi-download"></i> &nbsp; Тестовая версия</button>
         </div>
         <div class="logout">
           <p><a href="javascript:void(0)"><i class="bi bi-box-arrow-left"></i> <span>Выйти</span></a></p>
@@ -76,7 +76,14 @@ const userStore = useUserStore();
 const themeStore = useThemeStore(); // Используем хранилище темы
 const { navbarIsExpanded } = storeToRefs(themeStore);
 const token = ref(useCookie("token").value);
-
+const downloadExe = () => {
+  // Замените URL ниже на актуальный путь к вашему .exe файлу
+  const exeUrl = "https://disk.yandex.ru/d/oTvLKcnrGJydgg";
+  const link = document.createElement("a");
+  link.href = exeUrl;
+  link.download = "your_application.exe";
+  link.click();
+};
 onMounted(() => {
   userStore.fetchUser();
 });
